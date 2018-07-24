@@ -1,13 +1,12 @@
 import sys
 import os
 sys.path.append(os.path.dirname(os.path.realpath("{}/..".format(__file__))))
-from flask import Flask, request, abort
-from functools import wraps
-from secret import secret
+from flask import Flask
 from service_auth.flask import AuthHeader
 
 app = Flask(__name__)
 
+secret = os.getenv('SECRET')
 service_auth = AuthHeader(secret)
 
 @app.before_request

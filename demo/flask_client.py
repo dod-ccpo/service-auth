@@ -3,10 +3,10 @@ import os
 
 sys.path.append(os.path.dirname(os.path.realpath("{}/..".format(__file__))))
 import requests as rq
-from secret import secret
 from email.utils import formatdate
 from service_auth.http_token import make_token, validate_token
 
+secret = os.getenv('SECRET')
 url = "http://localhost:8007"
 data = "this is a request!"
 auth_header = "X-Token-Auth"

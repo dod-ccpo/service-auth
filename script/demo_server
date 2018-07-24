@@ -1,0 +1,8 @@
+#!/bin/bash
+
+# script/demo_server: Launch the demo server
+source "$(dirname "${0}")"/../script/demo_secret
+source "$(dirname "${0}")"/../script/include/global_header.inc.sh
+
+# Launch the app
+run_command "python ./demo/flask_app.py"

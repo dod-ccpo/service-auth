@@ -9,6 +9,8 @@ flask = "*"
 [dev-packages]
 pytest = "*"
 requests = "*"
+pylint = "*"
+bandit = "*"
 
 [requires]
 python_version = "3.6"
