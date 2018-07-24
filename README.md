@@ -17,3 +17,8 @@ pipenv run python demo/flask_client.py
 
 The client will try a couple unsuccessful requests, and then a successful request where it also validates the response.
 
+# Run the tests
+
+```
+pipenv run pytest
+```

@@ -19,10 +19,10 @@ class AuthHeader():
         host = request.headers.get("Host")
         body = request.data.decode()
         if not (auth_token and date and host):
-            return self.bail("request was missing necessary headers")
+            return self.bail("request was missing required headers")
 
         if validate_token(auth_token, self._secret, [date, host, body]):
-            return
+            return True
 
         else:
             return self.bail("request included an invalid token")
