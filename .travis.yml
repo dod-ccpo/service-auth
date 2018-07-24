@@ -9,6 +9,8 @@ before_install:
     - sed -i 's/git@github.com:/https:\/\/github.com\//' .gitmodules
     # Manually initialize submodules
     - git submodule update --init --recursive
+    # Install pipenv
+    - pip install pipenv
 
 before_script:
   - ./script/setup
