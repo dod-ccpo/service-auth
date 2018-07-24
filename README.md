@@ -2,6 +2,13 @@
 
 This library provides a class and utility functions for injecting secure headers in HTTP requests and responses. It targets Flask applications and can be adapted for any generic HTTP client library. An example for [`requests`](http://docs.python-requests.org/en/master/) is included.
 
+### Cloning
+
+This project contains git submodules. Here is an example clone command that will
+automatically initialize and update those modules:
+
+    git clone --recurse-submodules git@github.com:dod-ccpo/service-auth.git
+
 ### Setup
 
 This library uses Pipenv to manage Python dependencies and a virtual
